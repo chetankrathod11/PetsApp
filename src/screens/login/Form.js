@@ -14,21 +14,17 @@ import {
 
 const Form = () => {
   return (
-    <View
-      style={{
-        height: hp('25%'),
-        marginTop: hp('6%'),
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
+    <View style={styles.container}>
       <View style={{marginTop: hp('2%')}}>
         <Text style={styles.text}>Phone number / Email ID</Text>
         <TextInput
           placeholder="Enter your phone number / Email ID"
           placeholderTextColor="#FAFAFA"
+          keyboardType="email-address"
           style={styles.input}
         />
       </View>
+
       <View style={{marginTop: hp('2%')}}>
         <Text style={styles.text}>Password</Text>
         <TextInput
@@ -56,17 +52,7 @@ const Form = () => {
           Forgot Password?
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-evenly',
-          backgroundColor: '#FDBD60',
-          height: wp('9%'),
-          width: wp('30%'),
-          borderRadius: 18,
-          marginTop: hp('3%'),
-        }}>
+      <TouchableOpacity style={styles.buttonContainer}>
         <Text style={[styles.text, {color: '#000', fontWeight: 'bold'}]}>
           LOG IN
         </Text>
@@ -79,6 +65,7 @@ const Form = () => {
             width: wp('7%'),
             alignItems: 'center',
             justifyContent: 'center',
+            marginRight: hp('1%'),
           }}>
           <Image
             source={require('../../assets/images/dogpow.png')}
@@ -96,6 +83,12 @@ const Form = () => {
 export default Form;
 
 const styles = StyleSheet.create({
+  container: {
+    height: hp('25%'),
+    marginTop: hp('6%'),
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   input: {
     height: hp('5%'),
     width: wp('95%'),
@@ -114,5 +107,16 @@ const styles = StyleSheet.create({
     fontSize: hp('2%'),
     marginLeft: wp('3%'),
     fontFamily: 'BalooChettan2-Medium',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '#FDBD60',
+    height: wp('9%'),
+    width: wp('35%'),
+    borderRadius: 18,
+    marginTop: hp('3%'),
+    paddingLeft: wp('5%'),
   },
 });
