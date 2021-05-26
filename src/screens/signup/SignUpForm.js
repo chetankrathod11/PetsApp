@@ -10,7 +10,6 @@ import {
   Image,
   View,
   TouchableOpacity,
-  TouchableHighlight,
 } from 'react-native';
 
 const SignUpForm = () => {
@@ -40,7 +39,7 @@ const SignUpForm = () => {
           placeholder="Enter your password here"
           placeholderTextColor="#FAFAFA"
           secureTextEntry={true}
-          style={styles.input}
+          style={[styles.input, {fontSize: wp('3.8%')}]}
         />
       </View>
       <View style={styles.inputContainer}>
@@ -49,7 +48,7 @@ const SignUpForm = () => {
           placeholder="Enter your password here"
           placeholderTextColor="#FAFAFA"
           secureTextEntry={true}
-          style={styles.input}
+          style={[styles.input, {fontSize: wp('3.8%')}]}
         />
       </View>
       <View style={styles.termsConditionsContainer}>

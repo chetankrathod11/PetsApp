@@ -38,7 +38,7 @@ const LoginForm = () => {
             placeholder="Enter your password here"
             placeholderTextColor="#FAFAFA"
             secureTextEntry={true}
-            style={styles.input}
+            style={[styles.input, {fontSize: wp('3.4%')}]}
           />
         </View>
       </View>
