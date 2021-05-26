@@ -12,7 +12,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-const Form = () => {
+const LoginForm = () => {
   return (
     <View style={styles.container}>
       <View style={{marginTop: hp('2%')}}>
@@ -27,51 +27,34 @@ const Form = () => {
 
       <View style={{marginTop: hp('2%')}}>
         <Text style={styles.text}>Password</Text>
-        <TextInput
-          placeholder="Enter your password here"
-          placeholderTextColor="#FAFAFA"
-          secureTextEntry={true}
-          style={styles.input}
-        />
+        <View style={{flexDirection: 'row-reverse', alignItems: 'center'}}>
+          {/* <TouchableOpacity style={{backgroundColor: 'cyan'}}>
+            <Image
+              source={require('../../assets/images/hidePassword.png')}
+              style={{width: wp('4%'), height: wp('4%')}}
+            />
+          </TouchableOpacity> */}
+          <TextInput
+            placeholder="Enter your password here"
+            placeholderTextColor="#FAFAFA"
+            secureTextEntry={true}
+            style={styles.input}
+          />
+        </View>
       </View>
-      <TouchableOpacity
-        style={{
-          width: wp('35%'),
-          marginLeft: wp('66%'),
-        }}>
-        <Text
-          style={{
-            color: '#FAFAFA',
-            fontSize: wp('3%'),
-            fontWeight: 'bold',
-            margin: wp('1%'),
-            textAlign: 'right',
-            marginRight: wp('5%'),
-            fontFamily: 'BalooChettan2-Regular',
-          }}>
-          Forgot Password?
-        </Text>
+      <TouchableOpacity style={styles.forgotPwContainer}>
+        <Text style={styles.forgotPwText}>Forgot Password?</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.buttonContainer}>
         <Text style={[styles.text, {color: '#000', fontWeight: 'bold'}]}>
           LOG IN
         </Text>
-        <View
-          style={{
-            borderWidth: 3,
-            borderColor: '#000',
-            borderRadius: 18,
-            height: wp('7%'),
-            width: wp('7%'),
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginRight: hp('1%'),
-          }}>
+        <View style={styles.buttonImageContainer}>
           <Image
             source={require('../../assets/images/dogpow.png')}
             style={{
-              height: wp('5%'),
-              width: wp('5%'),
+              height: wp('4%'),
+              width: wp('4%'),
             }}
           />
         </View>
@@ -80,7 +63,7 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default LoginForm;
 
 const styles = StyleSheet.create({
   container: {
@@ -118,5 +101,28 @@ const styles = StyleSheet.create({
     borderRadius: 18,
     marginTop: hp('3%'),
     paddingLeft: wp('5%'),
+  },
+  buttonImageContainer: {
+    borderWidth: 3,
+    borderColor: '#000',
+    borderRadius: 18,
+    height: wp('7%'),
+    width: wp('7%'),
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: hp('0.8%'),
+  },
+  forgotPwContainer: {
+    width: wp('35%'),
+    marginLeft: wp('66%'),
+  },
+  forgotPwText: {
+    color: '#FAFAFA',
+    fontSize: wp('3%'),
+    fontWeight: 'bold',
+    margin: wp('1%'),
+    textAlign: 'right',
+    marginRight: wp('5%'),
+    fontFamily: 'BalooChettan2-Regular',
   },
 });
