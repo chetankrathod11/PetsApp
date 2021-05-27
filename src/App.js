@@ -13,6 +13,7 @@ import {
 import Login from './screens/login/Login';
 import SignUp from './screens/signup/SignUp';
 import PhoneNumber from './screens/phoneInput/PhoneInput';
+import Dashboard from './screens/dashboard/Dashboard';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -22,7 +23,8 @@ const App = () => {
 
       {/* <Login /> */}
       {/* <SignUp /> */}
-      <PhoneNumber />
+      {/* <PhoneNumber /> */}
+      <Dashboard />
     </SafeAreaView>
   );
 };

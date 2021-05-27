@@ -17,6 +17,7 @@ const LoginForm = () => {
     <View style={styles.container}>
       <View style={{marginTop: hp('2%')}}>
         <Text style={styles.text}>Phone number / Email ID</Text>
+
         <TextInput
           placeholder="Enter your phone number / Email ID"
           placeholderTextColor="#FAFAFA"
@@ -25,21 +26,31 @@ const LoginForm = () => {
         />
       </View>
 
-      <View style={{marginTop: hp('2%')}}>
-        <Text style={styles.text}>Password</Text>
-        <View style={{flexDirection: 'row-reverse', alignItems: 'center'}}>
-          {/* <TouchableOpacity style={{backgroundColor: 'cyan'}}>
+      <View style={{margin: wp('2%')}}>
+        <Text style={[styles.text, {marginLeft: wp('-2.5%')}]}>Password</Text>
+        <View
+          style={{
+            width: wp('93%'),
+            marginLeft: wp('-6%'),
+          }}>
+          <TouchableOpacity style={styles.hidePWContainer}>
             <Image
-              source={require('../../assets/images/hidePassword.png')}
-              style={{width: wp('4%'), height: wp('4%')}}
+              source={require('../../assets/images/hide.png')}
+              style={{
+                width: wp('6%'),
+                height: wp('4%'),
+                marginRight: wp('4%'),
+              }}
             />
-          </TouchableOpacity> */}
-          <TextInput
-            placeholder="Enter your password here"
-            placeholderTextColor="#FAFAFA"
-            secureTextEntry={true}
-            style={[styles.input, {fontSize: wp('3.4%')}]}
-          />
+          </TouchableOpacity>
+          <View style={{justifyContent: 'center'}}>
+            <TextInput
+              placeholder="Enter your password here"
+              placeholderTextColor="#FAFAFA"
+              secureTextEntry={true}
+              style={[styles.input, {width: wp('95%')}]}
+            />
+          </View>
         </View>
       </View>
       <TouchableOpacity style={styles.forgotPwContainer}>
@@ -51,7 +62,7 @@ const LoginForm = () => {
         </Text>
         <View style={styles.buttonImageContainer}>
           <Image
-            source={require('../../assets/images/dogpow.png')}
+            source={require('../../assets/images/paw-black-shape.png')}
             style={{
               height: wp('4%'),
               width: wp('4%'),
@@ -80,6 +91,8 @@ const styles = StyleSheet.create({
     margin: wp('2%'),
     paddingLeft: wp('5%'),
     fontFamily: 'BalooChettan2-Regular',
+    color: '#FAFAFA',
+    fontSize: wp('3.4%'),
   },
   button: {
     height: hp('6%'),
@@ -97,14 +110,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: '#FDBD60',
     height: wp('9%'),
-    width: wp('35%'),
+    width: wp('33%'),
     borderRadius: 18,
     marginTop: hp('3%'),
     paddingLeft: wp('5%'),
   },
   buttonImageContainer: {
-    borderWidth: 3,
-    borderColor: '#000',
+    backgroundColor: '#000',
     borderRadius: 18,
     height: wp('7%'),
     width: wp('7%'),
@@ -115,6 +127,7 @@ const styles = StyleSheet.create({
   forgotPwContainer: {
     width: wp('35%'),
     marginLeft: wp('66%'),
+    marginTop: wp('-2%'),
   },
   forgotPwText: {
     color: '#FAFAFA',
@@ -124,5 +137,13 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     marginRight: wp('5%'),
     fontFamily: 'BalooChettan2-Regular',
+  },
+  hidePWContainer: {
+    width: wp('7%'),
+    height: wp('5%'),
+    position: 'absolute',
+    zIndex: 1,
+    marginTop: hp('2.5%'),
+    marginLeft: wp('85%'),
   },
 });
