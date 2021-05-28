@@ -14,6 +14,9 @@ import Login from './screens/login/Login';
 import SignUp from './screens/signup/SignUp';
 import PhoneNumber from './screens/phoneInput/PhoneInput';
 import Dashboard from './screens/dashboard/Dashboard';
+import EmergencyContact from './screens/emergencyContact/EmergencyContact';
+import PaymentHistory from './screens/paymentHistory/PaymentHistory';
+import AddCard from './screens/addCard/AddCard';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -24,7 +27,10 @@ const App = () => {
       {/* <Login /> */}
       {/* <SignUp /> */}
       {/* <PhoneNumber /> */}
-      <Dashboard />
+      {/* <Dashboard /> */}
+      {/* <EmergencyContact /> */}
+      {/* <PaymentHistory /> */}
+      <AddCard />
     </SafeAreaView>
   );
 };
